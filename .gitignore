@@ -1,0 +1,11 @@
+# gitignore
+
+# ignored files
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.webm
+
+# vscode
+*.code-workspace
