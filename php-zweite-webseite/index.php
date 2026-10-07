@@ -1,6 +1,25 @@
 <?php
 
-    require_once 'config.php';
+    // Schauen, ob page in der URL gesetzt wurde
+    if (isset($_GET['page'])) {
+        
+        // Schauen welchen wert page hat
+        if ($_GET['page'] == '2') {
+            require_once 'vars_page2.php';
+        }
+        elseif ($_GET['page'] == '3') {
+            require_once 'vars_page3.php';
+        }
+        // bei allen anderen werten lade index
+        else {
+           require_once 'vars_index.php'; 
+        }
+
+    }
+    // wenn nich, lade index
+    else {
+        require_once 'vars_index.php';
+    }
 
 
     // hier beginnt der bauplan für das HTML
@@ -29,6 +48,8 @@
     echo '<h1>';
     echo $headline;
     echo '</h1>';
+
+    require_once 'navigation.php';
 
     echo '<div>';
     echo $text1;
